@@ -1,0 +1,21 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.wp-block-cgb-block-mds-hawthornelane-hover  {
+  background: #fafafa;
+  border: 0.2rem solid $black;
+  color: $black;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem;
+
+  .rich-text{
+    background: #fff;
+    padding: 10px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.3)
+  }
+}
