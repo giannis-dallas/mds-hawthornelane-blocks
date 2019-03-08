@@ -115,7 +115,7 @@ registerBlockType( 'cgb/block-mds-hawthornelane-hover', {
 				
 				<div className="hover-effect">
 
-					<figure className="effect-bubba">
+					<figure className="effect-animate-border">
 						{imageSRC && <img src={imageSRC} alt="img"/>}
 						<figcaption>
 							<h2>{attributes.title}</h2>
@@ -135,7 +135,7 @@ registerBlockType( 'cgb/block-mds-hawthornelane-hover', {
 			<div>
 				<div className="hover-effect">
 
-					<figure className="effect-bubba">
+					<figure className="effect-animate-border">
 						{imageSRC && <img src={imageSRC} className="wp-image-00" alt="img"/>}
 						<figcaption>
 							<h2>{title}</h2>

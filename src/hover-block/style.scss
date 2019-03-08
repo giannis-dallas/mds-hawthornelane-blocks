@@ -39,8 +39,8 @@
 
     figcaption {
       padding: 2em;
+      box-sizing: border-box;
       color: #fff;
-      text-transform: uppercase;
       font-size: 1.25em;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
@@ -89,10 +89,10 @@
 }
 
 /*---------------*/
-/***** Bubba *****/
+/***** Animate Border *****/
 /*---------------*/
 
-figure.effect-bubba {
+figure.effect-animate-border {
   background: #9e5406;
   
   img {
@@ -132,7 +132,8 @@ figure.effect-bubba {
     transform: scale(1,0);
   }
 
-  h2 {
+  h2 {    
+    text-transform: uppercase;
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
     -webkit-transform: translate3d(0,-20px,0);
