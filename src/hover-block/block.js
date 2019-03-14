@@ -38,10 +38,10 @@ registerBlockType( 'cgb/block-mds-hawthornelane-hover', {
 	],
 
 	attributes: {
-        title: {
+        theTitle: {
             type: 'string',
             source: 'html',
-			selector: 'text-title',
+			selector: '.text-title',
 		},
 		imageSRC:{
 			type: 'string',
@@ -49,22 +49,16 @@ registerBlockType( 'cgb/block-mds-hawthornelane-hover', {
 			selector: 'img',
 			attribute: 'src'
 		},
-		imageClass:{
-			type: 'string',
-			source: 'attribute',
-			selector: 'img',
-			attribute: 'className'
-		},
-		desc: {
+		theDescription: {
 			type: 'string',
             source: 'html',
-			selector: 'text-desc',
+			selector: '.text-desc',
 		}
     },
 
 	edit( { attributes, setAttributes, className } ) {
 
-		let {imageSRC,title,desc} = attributes;
+		let {imageSRC,theTitle,theDescription} = attributes;
 
 		function selectImage(e) {
 			console.log(e);
@@ -76,14 +70,14 @@ registerBlockType( 'cgb/block-mds-hawthornelane-hover', {
 		function onChangeTitle(value) {
 			console.log(value);
 			setAttributes({
-				title: value
+				theTitle: value
 			})
 		}
 
 		function onChangeDesc(value) {
 			console.log(value);
 			setAttributes({
-				desc: value
+				theDescription: value
 			})
 		}
 
@@ -98,28 +92,27 @@ registerBlockType( 'cgb/block-mds-hawthornelane-hover', {
 				<label>Add the title</label>
 				<RichText
 					format="string"
-					className= "rich-text text-title"
+					tagName="h2"
 					formattingControls={ [] }
 					onChange={ onChangeTitle }
-					value={ title }
+					value={ theTitle }
 				/>
 				<label>Add the description</label>
 				<RichText
 					format="string"
-					className= "rich-text text-desc"
+					tagName="p"
 					formattingControls={ [] }
 					onChange={ onChangeDesc }
-					value={ desc }
-				/>
-				
+					value={ theDescription }
+				/>				
 				
 				<div className="hover-effect">
 
 					<figure className="effect-animate-border">
 						{imageSRC && <img src={imageSRC} alt="img"/>}
 						<figcaption>
-							<h2>{attributes.title}</h2>
-							<p><RichText.Content value={ desc } /></p>
+							<RichText.Content tagName="h2" value={ theTitle } />
+							<RichText.Content tagName="p" value={ theDescription } />
 						</figcaption>			
 					</figure>
 
@@ -130,16 +123,17 @@ registerBlockType( 'cgb/block-mds-hawthornelane-hover', {
 
 	save( {attributes,className} ) {
 
-		const {imageSRC, title, desc} = attributes;
+		let {imageSRC,theTitle,theDescription} = attributes;
+
 		return (
 			<div>
 				<div className="hover-effect">
 
 					<figure className="effect-animate-border">
-						{imageSRC && <img src={imageSRC} className="wp-image-00" alt="img"/>}
+						{imageSRC && <img src={imageSRC} alt="img"/>}
 						<figcaption>
-							<h2>{title}</h2>
-							<p><RichText.Content value={ desc } /></p>
+							<RichText.Content className= "text-title" tagName="h2" value={ theTitle } />
+							<RichText.Content className="text-desc" tagName="p" value={ theDescription } />
 						</figcaption>			
 					</figure>
 

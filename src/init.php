@@ -20,6 +20,14 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 function mds_hawthornelane_cgb_block_assets() { // phpcs:ignore
+	
+	wp_enqueue_script(
+		'mds_hawthornelane-cgb-block-events-js',
+		plugins_url( '/src/events.js', dirname( __FILE__ ) ), 
+		array(), 
+		true 
+	);
+	
 	// Styles.
 	wp_enqueue_style(
 		'mds_hawthornelane-cgb-style-css', // Handle.

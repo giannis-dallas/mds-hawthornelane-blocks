@@ -10,4 +10,4 @@
  */
 
 import './hover-block/block.js';
-import './team-block/block.js'
+import './team-block/block.js';
