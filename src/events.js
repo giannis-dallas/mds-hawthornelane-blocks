@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
 
-    function debounce(func, wait = 20, immediate = true) {
+    function debounce(func, wait = 10, immediate = true) {
         var timeout;
         return function() {
           var context = this, args = arguments;
@@ -16,22 +16,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
       };
 
     const animatedFigures = Array.from(document.querySelectorAll('.effect-animate-border') );    
-    //console.log(animatedFigures);
 
-    function isElementInViewport (el) {
-    
-        var rect = el.getBoundingClientRect(); 
-
-        if(
-            rect.top >= 0 ||
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-        ){
-            el.classList.add('active');
+    function isElementInViewport (el,i) {
+        
+        const rect = el.getBoundingClientRect(); 
+        const elemTop = rect.top;
+        const elemBottom = rect.bottom;
+        
+        if( elemTop < window.innerHeight && (elemBottom <= window.innerHeight) ){
+            if(!el.classList.contains('active')){
+               el.classList.add('active');
+            console.log( (window.scrollY+window.innerHeight) , (rect.top + el.offsetHeight), el,i, 'active'); 
+            }
+            
         }
     }
     
     function handleFigures(e){
-        animatedFigures.forEach( figure => debounce(isElementInViewport(figure)) )        
+        animatedFigures.forEach( (figure,i) => debounce(isElementInViewport(figure,i)) )        
     }
 
     window.addEventListener('scroll',handleFigures)

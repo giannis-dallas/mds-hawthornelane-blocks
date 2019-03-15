@@ -108,7 +108,7 @@ registerBlockType( 'cgb/block-mds-hawthornelane-hover', {
 				
 				<div className="hover-effect">
 
-					<figure className="effect-animate-border">
+					<figure className="effect-animate-border.active">
 						{imageSRC && <img src={imageSRC} alt="img"/>}
 						<figcaption>
 							<RichText.Content tagName="h2" value={ theTitle } />
