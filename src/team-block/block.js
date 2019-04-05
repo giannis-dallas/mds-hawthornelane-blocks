@@ -108,7 +108,7 @@ registerBlockType( 'cgb/block-mds-hawthornelane-team', {
 						<a href={ url }></a>
 						{imageURL && <img src={imageURL}  alt={imageAlt} /> }
 						<figcaption>
-							<h2 className="team-name">{ name }<span>{role}</span></h2>
+							<h2><span className="team-name">{ name }</span><span className="team-role">{role}</span></h2>
 							<p><i class="fa fa-chevron-right"></i></p>
 						</figcaption>
 					</figure>
@@ -127,7 +127,7 @@ registerBlockType( 'cgb/block-mds-hawthornelane-team', {
 					<a href={ url }></a>
 					{imageURL && <img src={imageURL}  alt={imageAlt} className={ imageID ? `wp-image-${ imageID }` : null } /> }
 					<figcaption>
-						<h2 className="team-name">{ name }<span>{role}</span></h2>
+						<h2><span className="team-name">{ name }</span><span className="team-role">{role}</span></h2>
 						<p><i class="fa fa-chevron-right"></i></p>
 					</figcaption>
 				</figure>
