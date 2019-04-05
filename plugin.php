@@ -1,15 +1,13 @@
 <?php
 /**
- * Plugin Name: mds-hawthornelane — CGB Gutenberg Block Plugin
- * Plugin URI: https://github.com/ahmadawais/create-guten-block/
- * Description: mds-hawthornelane — is a Gutenberg plugin created via create-guten-block.
- * Author: mrahmadawais, maedahbatool
- * Author URI: https://AhmadAwais.com/
- * Version: 1.0.0
- * License: GPL2+
- * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
- *
- * @package CGB
+ * Plugin Name: MDS Design Blocks for Hawthornelane 
+ * Plugin URI: http://www.mosaicdataservices.com
+ * Description: DO NOT DEACTIVATE - Mosaic Data Services HawthorneLane Blocks Plugin.
+ * Version: 2.0.0
+ * Author:      Mosaic Data Services, Dallas G.
+ * Author URI:  http://www.mosaicdataservices.com
+ * License:     Propietary
+ * License URI: http://www.mosaicdataservices.com
  */
 
 // Exit if accessed directly.
