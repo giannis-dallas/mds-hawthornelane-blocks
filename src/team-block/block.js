@@ -12,7 +12,7 @@ import './editor.scss';
 const { __ } = wp.i18n; // Import __() from wp.i18n
 const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
 const { Button, TextControl } = wp.components;
-const { MediaUpload, URLInput } = wp.editor;
+const { MediaUpload, URLInput, URLInputButton } = wp.editor;
 
 /**
  * Register: a Gutenberg Block.
@@ -56,6 +56,10 @@ registerBlockType( 'cgb/block-mds-hawthornelane-team', {
 		url: {
 			type: 'string',
 		},
+		text: {
+			type: 'string',
+		},
+		
 	},
 
 	edit( { attributes, setAttributes, className } ) {
@@ -97,10 +101,9 @@ registerBlockType( 'cgb/block-mds-hawthornelane-team', {
 					onChange={ ( role ) => setAttributes( { role } ) }
 				/>
 
-				<URLInput
-					className={ className }
-					value={ attributes.url }
-					onChange={ ( url ) => setAttributes( { url } ) }
+				<URLInputButton
+					url={ attributes.url }
+					onChange={ ( url, post ) => setAttributes( { url, text: (post && post.title) || 'Click here' } ) }
 				/>
 
 				<div className="team-member">

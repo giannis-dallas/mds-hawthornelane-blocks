@@ -3,7 +3,7 @@
  * Plugin Name: MDS Design Blocks for Hawthornelane 
  * Plugin URI: http://www.mosaicdataservices.com
  * Description: DO NOT DEACTIVATE - Mosaic Data Services HawthorneLane Blocks Plugin.
- * Version: 2.0.0
+ * Version: 2.1.0
  * Author:      Mosaic Data Services, Dallas G.
  * Author URI:  http://www.mosaicdataservices.com
  * License:     Propietary
