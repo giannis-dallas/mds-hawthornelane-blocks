@@ -114,17 +114,20 @@ figure.effect-team {
     padding: 0 1.5em 7% 0;
   }
 
-  i {
+  p i {
     margin: 0 10px;
-    color: #212121;
+    color: #000;
     font-size: 110%;
   }
 
-  i:hover,
-  i:focus {
-	  color: #000;
+  svg{
+    margin: 0 10px;
+    fill: #000;
+    width:26px;
+    height:26px
   }
 
+  p svg,
   p i {
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -150,6 +153,7 @@ figure.effect-team {
       transform: rotate3d(0,0,1,25deg);
     }
 
+    p svg,
     p i {
       opacity: 1;
       -webkit-transform: translate3d(0,0,0);

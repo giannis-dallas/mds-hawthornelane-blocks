@@ -9,6 +9,8 @@
 import './style.scss';
 import './editor.scss';
 
+import ChevronRight from '@material-ui/icons/ChevronRight';
+
 const { __ } = wp.i18n; // Import __() from wp.i18n
 const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
 const { Button, TextControl } = wp.components;
@@ -59,7 +61,6 @@ registerBlockType( 'cgb/block-mds-hawthornelane-team', {
 		text: {
 			type: 'string',
 		},
-		
 	},
 
 	edit( { attributes, setAttributes, className } ) {
@@ -112,7 +113,9 @@ registerBlockType( 'cgb/block-mds-hawthornelane-team', {
 						{imageURL && <img src={imageURL}  alt={imageAlt} /> }
 						<figcaption>
 							<h2><span className="team-name">{ name }</span><span className="team-role">{role}</span></h2>
-							<p><i class="fa fa-chevron-right"></i></p>
+							<p><ChevronRight /></p>
+							<ChevronRight />
+							<p>Test</p>
 						</figcaption>
 					</figure>
 				</div>
@@ -131,7 +134,9 @@ registerBlockType( 'cgb/block-mds-hawthornelane-team', {
 					{imageURL && <img src={imageURL}  alt={imageAlt} className={ imageID ? `wp-image-${ imageID }` : null } /> }
 					<figcaption>
 						<h2><span className="team-name">{ name }</span><span className="team-role">{role}</span></h2>
-						<p><i class="fa fa-chevron-right"></i></p>
+						<p><ChevronRight /></p>
+						<ChevronRight />
+						<p>Test</p>
 					</figcaption>
 				</figure>
 			</div>
