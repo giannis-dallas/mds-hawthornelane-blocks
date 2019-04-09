@@ -22,7 +22,7 @@ function create_mdsteam_shortcode($atts) {
 
 	$image = wp_get_attachment_image_src( $image_id );
 	$href = vc_build_link( $link )['url'];
-	echo '<pre>'; print_r($href); echo '</pre>';
+	
 	// Output Code
 	$output = '<div class="team-member"><figure class="effect-team">';
 	$output .= wp_get_attachment_image( $image_id, 'large' );
