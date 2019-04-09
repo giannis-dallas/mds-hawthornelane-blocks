@@ -1,3 +1,11 @@
+Added WPBakery and Gutenberg support for Hawthorne Lane
+
+## WpBakery 
+
+All code is in wpbakery.php file
+
+## Create Guten Block
+
 This project was bootstrapped with [Create Guten Block](https://github.com/ahmadawais/create-guten-block).
 
 Below you will find some information on how to run scripts.
